@@ -1,13 +1,13 @@
-from aiogram import Bot, Dispatcher, types
+from aiogram import Bot, Dispatcher
 from aiogram.types import Message
 import asyncio
+import os
 
-API_TOKEN = "8336108710:AAFNXinJwT6Lhq5ppR7ttnX51YTRfF1dTog"
+API_TOKEN = os.getenv("API_TOKEN")
+ADMIN_ID = int(os.getenv("ADMIN_ID"))
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher()
-
-ADMIN_ID = 357942589  # твой Telegram ID
 
 
 # команда /start
